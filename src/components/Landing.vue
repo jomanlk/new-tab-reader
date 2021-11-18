@@ -1,7 +1,9 @@
 <template>
-    <section class="row">
+  <section class="row">
     <div class="col-12 mb-3">
-      <button @click="parse" type="button" class="btn btn-primary">Parse</button>
+      <button @click="parse" type="button" class="btn btn-primary">
+        Parse
+      </button>
     </div>
 
     <div class="col-12">
@@ -12,19 +14,19 @@
 
 <script>
 import FeedParser from '../libs/feed/FeedParser';
-import FeedItemList from './FeedItemList.vue'
+import FeedItemList from './FeedItemList.vue';
 
 const parser = new FeedParser();
 
 export default {
   name: 'Landing',
 
-  components:{FeedItemList},
+  components: { FeedItemList },
 
-  methods : {
+  methods: {
     parse: function parse() {
       parser.syncAllFeeds();
-    }
-  }
-}
+    },
+  },
+};
 </script>
