@@ -8,20 +8,20 @@
       <div v-for="item in items" :key="item.id" class="card-wrap mb-2">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">
+            <h3 class="card-title">
               <a :href="item.link">{{ item.title }}</a>
-            </h5>
-            <h6 class="card-subtitle mb-2 ">
+            </h3>
+            <h4 class="card-subtitle mb-2 ">
               <a class="text-muted" :href="item.siteLink">{{
                 item.siteTitle
               }}</a>
-            </h6>
+            </h4>
             <p class="card-text">
               {{ item.contentSnippet }}
-              <small>
-                {{ item.isoDate }}
-              </small>
             </p>
+            <small>
+              <timeago :datetime="item.isoDate"></timeago>
+            </small>
           </div>
         </div>
       </div>
@@ -58,11 +58,3 @@ export default {
   methods: {},
 };
 </script>
-
-<style lang="scss">
-.feed-list {
-  a {
-    display: none;
-  }
-}
-</style>

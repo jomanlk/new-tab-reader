@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
+import VueTimeago from 'vue-timeago';
 
 Vue.config.productionTip = false;
 
@@ -10,6 +11,11 @@ const router = new VueRouter({
 });
 
 Vue.use(VueRouter);
+
+Vue.use(VueTimeago, {
+  name: 'Timeago',
+  locale: 'en',
+});
 
 new Vue({
   router,
