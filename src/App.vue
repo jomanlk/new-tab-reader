@@ -1,10 +1,14 @@
 <template>
   <div id="app">
-    <Header 
-      @toggleImportFeeds="isImportFeedsVisible = true" 
-      @toggleViewFeeds="isViewFeedsVisible = true" />
-    <ImportFeeds @close="isImportFeedsVisible = false" v-if="isImportFeedsVisible" 
-      :isVisible="isImportFeedsVisible" />
+    <Header
+      @toggleImportFeeds="isImportFeedsVisible = true"
+      @toggleViewFeeds="isViewFeedsVisible = true"
+    />
+    <ImportFeeds
+      @close="isImportFeedsVisible = false"
+      v-if="isImportFeedsVisible"
+      :isVisible="isImportFeedsVisible"
+    />
     <router-view class="container-fluid mt-3"></router-view>
   </div>
 </template>
@@ -15,16 +19,19 @@ import ImportFeeds from './components/ImportFeeds.vue';
 
 export default {
   name: 'App',
-  data : function data(){
+  data: function data() {
     return {
-      isImportFeedsVisible : false,
-      isViewFeedsVisible : false
-    }
+      isImportFeedsVisible: false,
+      isViewFeedsVisible: false,
+    };
   },
   components: {
     Header,
     ImportFeeds,
-  }
-}
+  },
+};
 </script>
- 
+
+<style lang="scss">
+@import './assets/scss/style.scss';
+</style>
