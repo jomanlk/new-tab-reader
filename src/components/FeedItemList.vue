@@ -58,3 +58,11 @@ export default {
   methods: {},
 };
 </script>
+
+<style lang="scss">
+.feed-list {
+  a {
+    display: none;
+  }
+}
+</style>

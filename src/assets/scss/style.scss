@@ -1,0 +1,61 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+textarea.form-control {
+  min-height: 150px;
+}
+
+/** 
+Card Styles 
+**/
+.feed-list {
+  > .card-wrap {
+    display: inline-block;
+  }
+  .card {
+    overflow: hidden;
+
+    .card-subtitle {
+      text-transform: uppercase;
+    }
+    .card-text small {
+      display: block;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+  }
+  .card-title {
+    white-space: nowrap;
+  }
+}
+
+/**
+Size tweaks
+**/
+
+@media screen and (max-width: 1024px) {
+  .feed-list .card-wrap {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1800px) {
+  .feed-list .card-wrap {
+    width: 32%;
+  }
+}
+
+@media screen and (min-width: 1801px) {
+  .feed-list .card-wrap {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .feed-list .card-wrap {
+    width: 15%;
+  }
+}
