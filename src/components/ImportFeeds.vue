@@ -57,6 +57,13 @@ export default {
         return;
       }
 
+      console.log('starting log1');
+      console.log(Feed);
+      console.log(Feed._name);
+      console.log(Feed.name);
+      console.log(Object.getOwnPropertyNames(Feed));
+      console.log(Object.getOwnPropertyDescriptor(Feed, '_name'));
+
       const feedModels = [];
       feeds.forEach(feedData => {
         feedModels.push(new Feed(feedData));

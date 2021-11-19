@@ -3,6 +3,7 @@ import App from './App.vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
 import VueTimeago from 'vue-timeago';
+import VueSnip from 'vue-snip';
 
 Vue.config.productionTip = false;
 
@@ -16,6 +17,8 @@ Vue.use(VueTimeago, {
   name: 'Timeago',
   locale: 'en',
 });
+
+Vue.use(VueSnip);
 
 new Vue({
   router,

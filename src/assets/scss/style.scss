@@ -12,23 +12,54 @@ textarea.form-control {
 Card Styles 
 **/
 .feed-list {
-  > .card-wrap {
-    display: inline-block;
+  h3 {
+    font-size: 1.3em;
+    a {
+      text-decoration: none;
+    }
   }
-  .card {
-    overflow: hidden;
+}
 
-    .card-subtitle {
-      text-transform: uppercase;
-    }
-    .card-text small {
-      display: block;
-      font-size: 0.75rem;
-      white-space: nowrap;
+.feed-item-list {
+  h3 {
+    font-size: 1.3em;
+    height: 2.6em;
+
+    a {
+      text-decoration: none;
     }
   }
-  .card-title {
-    white-space: nowrap;
+
+  .card-wrap {
+    display: inline-block;
+
+    .card {
+      overflow: hidden;
+
+      .card-subtitle {
+        font-size: 0.7rem;
+      }
+
+      .card-image {
+        height: 10rem;
+        border-radius: 0.25em 0.25em 0 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .card-text {
+        background-color: #444;
+        background-color: #444;
+        padding: 0.5em;
+        border-radius: 0 0 0.25em;
+
+        small {
+          display: block;
+          font-size: 0.75rem;
+        }
+      }
+    }
   }
 }
 
@@ -37,25 +68,25 @@ Size tweaks
 **/
 
 @media screen and (max-width: 1024px) {
-  .feed-list .card-wrap {
+  .feed-item-list .card-wrap {
     width: 50%;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1800px) {
-  .feed-list .card-wrap {
+  .feed-item-list .card-wrap {
     width: 32%;
   }
 }
 
 @media screen and (min-width: 1801px) {
-  .feed-list .card-wrap {
-    width: 25%;
+  .feed-item-list .card-wrap {
+    width: 20%;
   }
 }
 
 @media screen and (min-width: 2400px) {
-  .feed-list .card-wrap {
+  .feed-item-list .card-wrap {
     width: 15%;
   }
 }
