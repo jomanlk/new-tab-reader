@@ -8,10 +8,13 @@ class Feed {
     this.id = this.feedUrl;
   }
 
+  static get name() {
+    return 'Feed';
+  }
+
   getSiteUrl() {
     return this.url ? this.url : this.feedUrl;
   }
 }
 
-Feed.prototype.name = 'Feed';
 export default Feed;

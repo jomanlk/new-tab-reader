@@ -1,7 +1,18 @@
 class FeedItem {
-  constructor({ link, title, contentSnippet, siteTitle, siteLink, isoDate }) {
+  name = 'FeedItem';
+
+  constructor({
+    link,
+    title,
+    image,
+    contentSnippet,
+    siteTitle,
+    siteLink,
+    isoDate,
+  }) {
     this.link = link;
     this.title = title;
+    this.image = image;
     this.contentSnippet = contentSnippet;
     this.siteTitle = siteTitle;
     this.siteLink = siteLink;
@@ -9,7 +20,10 @@ class FeedItem {
 
     this.id = this.link;
   }
+
+  static get name() {
+    return 'FeedItem';
+  }
 }
-FeedItem.prototype.name = 'FeedItem';
 
 export default FeedItem;
