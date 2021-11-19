@@ -21,10 +21,10 @@ class FeedParser {
             resolve([]);
             return;
           }
-          console.log(feed);
           resolve(
             feed.items.slice(0, 50).map(item => {
               // Do some more cleanup
+              item.image = `https://picsum.photos/seed/${btoa(item.link)}/600`;
               item.siteTitle = feed.title;
               item.siteLink = feed.link;
               item.contentSnippet = item.contentSnippet.substring(0, 150);
